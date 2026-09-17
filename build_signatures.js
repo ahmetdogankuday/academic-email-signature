@@ -1,6 +1,37 @@
 const fs = require('fs');
 
-const data = JSON.parse(fs.readFileSync('assets/data_uris.json', 'utf8'));
+// Hosted HTTPS Assets on GitHub (Guarantees 100% compatibility with Outlook, OWA, Gmail, Apple Mail)
+const ASSET_BASE = "https://raw.githubusercontent.com/ahmetdogankuday/academic-email-signature/main/assets";
+
+const data = {
+  logos: {
+    bvuYuvarlak: `${ASSET_BASE}/bvu-yuvarlak-opt.png`,
+    bvuYatay: `${ASSET_BASE}/bvu-yatay-opt.png`,
+    cochraneYatay: `${ASSET_BASE}/cochrane-yatay-opt.png`,
+    cochraneStacked: `${ASSET_BASE}/cochrane-stacked-opt.png`,
+    cochraneCircle: `${ASSET_BASE}/cochrane-circle-opt.png`,
+  },
+  iconsSquare: {
+    scholar: `${ASSET_BASE}/icons/scholar.png`,
+    scopus: `${ASSET_BASE}/icons/scopus.png`,
+    orcid: `${ASSET_BASE}/icons/orcid.png`,
+    publons: `${ASSET_BASE}/icons/publons.png`,
+    researchgate: `${ASSET_BASE}/icons/researchgate.png`,
+    linkedin: `${ASSET_BASE}/icons/linkedin.png`,
+  },
+  iconsCircle: {
+    scholar: `${ASSET_BASE}/icons_circle/scholar.png`,
+    scopus: `${ASSET_BASE}/icons_circle/scopus.png`,
+    orcid: `${ASSET_BASE}/icons_circle/orcid.png`,
+    publons: `${ASSET_BASE}/icons_circle/publons.png`,
+    researchgate: `${ASSET_BASE}/icons_circle/researchgate.png`,
+    linkedin: `${ASSET_BASE}/icons_circle/linkedin.png`,
+  },
+  contactIcons: {
+    mailBadge: `${ASSET_BASE}/icons/mail_badge.png`,
+    phoneBadge: `${ASSET_BASE}/icons/phone_badge.png`,
+  }
+};
 
 // User Data
 const USER = {
@@ -28,8 +59,8 @@ const USER = {
 
 // High contrast white-on-bordeaux contact badges for 100% Dark Mode & Mobile compatibility
 const contactBadges = {
-  mail: data.contactIcons.mailBadge || "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAACiklEQVR4AexWUXbaMBAcuadwriH+Q/7pNczrKTCn6MPXoP/Qf3QNeorW3ZGtxI7DSyRLEL2wj8WysHZndlZYBS7YTyyWDfSBvoNub+Fd7kW9w6K+ABMTAg54gfbQAkv6pcWp57vc7QZoNztbxCmREQEydcBTgwuLTyJjEs8ECJ5MwwJfc9WYhCWQD3hXqHbDVuedJZBH5Qn3xb/JvuBd0VWfw7ycG5wq9ArkBd6hpQqFQvvoJnK8FpQiR+DETOxZtxBJ3AmwCrf0r6vAw1IjpoeqGKTA98MOq8iu6woh5k1AS6JSqo/IpjeVVdQ3rDeBh0dtc/w5GphtY8dzvhiDsRijDCiMNwEMzNQNGrUIIkLQdq3EGIT0Hs4iwE3MjCRiPqgGgf96WmMvzrWMUQZUHr0FEygl6Uo2spY9ATGSaN5RwwjJvQA/S/vJErg/A45D3YPA2ym0bL6qPUEPiBgBioG5qpu+XbQ8yzXlsttPmGGzCbjcWohoAQYxAm16NYyQ2fdVZ7uw6nxWHovyiUaAaAiseq3GoOorabkyQtUxsKgEXFwtarDSrDidY86532NekxAgwFIqvZKK0zlGIktGIBHeSdg7gUlJrjxxV+DKBZ+k81bAyItpEuWGE94EznKOSUGCxw3Tv/R86uFNgMGZqJGjAk+VsXwvxw3G9vUgAi7JWdSI5S6m73UWAd9kKZ6/E0hRVZ+Y+SuggCMyNWLPWoEW6nfxF2qbqQAWdvEDpyOlsHexvq4UZ41TbVsoTxW6zrEEqAKyaiW1ZfUhZgnIFd1Ex4r3n9dfwBPjMwHefGYSSv7u/0HJke9UE6vzEQFOrmVjrGEUbEuprQxu9p5gbjqBVzBPXatjZP8BAAD//7s8C/0AAAAGSURBVAMApLJ/g26neOEAAAAASUVORK5CYII=",
-  phone: data.contactIcons.phoneBadge || "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAACjUlEQVR4AeyYXW7iMBSFjzOryGzDvA99z2wDNKtIWMWIbKN9h77jbdBVtOk9Tk2TVkbUiZ1aqqVD/EPi8/le44gCnvIfq3ULfaD20N0S6udeNXusGo9NfAJwxgt0hw5YU76bY/f3c3c10NV7u4ifQUYAJHXGY5sLez5BxhAXAJonadiDU941hrAA+Zh3C9XVTHW2LEAeK0+77/ol+4Ktol99VvMSNzij8BaBvMw7t4xCodD9cR05XguGIkfj9EzvWacQIX4AuApLKjgCv9cautmMhAVKEIAW49VBXq9qARjor/QhcQkC8Hks1xqpSxDA09F4fTK1vIMRBoIAIvgIfuTsAGXiNAoCOEsKXUsjJCxBAD5/ZtfCNK1vOEr/FwDG89PssIft1OY5fzDAeZBGTCeTeOVpngoG4M1cdV5L2bhaDjcsUCYBnAdR0HIipz4DuF6TAPgAFwXWCcFrSk0GYBQcRLlAKk0GgBQjG9hBMArasx+YYhxzYhsTyywA9EAI/hqxTgi+mQ4Nsl7J26qWveJUSXvTnUBxnPd+VbMBcOL7uy2MHGasl5JOlRjUEg2aYx0RyqwA9MdIOAi2db1BJSCsx9DsADRJiFatLtFgXyxFAXBmCWIkpSjXN/c1KgDNWgj5lWrfImIEiP1zKTrA0OgQphWgB9n0Tmc51YffvbWeFOCjKZp2+jh2a3tRgFtNXvveD8C11UkxJn+v44hMiwKOWadQB/VYPEPtMg2AtV38w+moJBS2NddHoudscWpsCuUZhT5zLACjgKxSSe24+pBiAeSKvqOnYvv76t08PV4A2PjOEEr26QuUvD2dGnp1GgGwcysbYwujYFNK7aSy2DnBuSka38Dc9amOUXkFAAD//0FuiIgAAAAGSURBVAMAP/cfgyvRa3YAAAAASUVORK5CYII="
+  mail: `${ASSET_BASE}/icons/mail_badge.png`,
+  phone: `${ASSET_BASE}/icons/phone_badge.png`
 };
 
 // Helper for icon row - Mobile optimized 18px size and 5px spacing
