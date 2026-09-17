@@ -48,7 +48,7 @@
 - **SHMYO Web Sitesi:** [https://bezmialem.edu.tr/shmyo](https://bezmialem.edu.tr/shmyo) *(Sağlık Hizmetleri Meslek Yüksekokulu metnine tıklandığında açılır)*
 - **İlk ve Acil Yardım Program Tanıtımı:** [https://bezmialem.edu.tr/shmyo/tr/Sayfalar/ilk-ve-acil-yardim/program-tanitimi.aspx](https://bezmialem.edu.tr/shmyo/tr/Sayfalar/ilk-ve-acil-yardim/program-tanitimi.aspx) *(Program metnine tıklandığında açılır)*
 - **Üniversite Web Sitesi:** [https://bezmialem.edu.tr](https://bezmialem.edu.tr) *(Logolara tıklandığında açılır)*
-- **Cochrane Türkiye:** [https://turkey.cochrane.org](https://turkey.cochrane.org) *(Cochrane logosuna ve başlığına tıklandığında açılır)*
+- **Cochrane Türkiye:** [https://turkiye.cochrane.org](https://turkiye.cochrane.org) *(Cochrane logosuna ve başlığına tıklandığında açılır)*
 
 ### Akademik Rozetler:
 - **Google Scholar:** `https://scholar.google.com.tr/citations?user=S9J_POsAAAAJ`
