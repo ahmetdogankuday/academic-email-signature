@@ -267,113 +267,11 @@ function getDesign2(iconType = 'square') {
 }
 
 // --------------------------------------------------------------------------
-// DESIGN 3: Çift Dairesel Prestij (Sol BVU & Cochrane İkiz Arma)
+// DESIGN 3: Dikey Çift Kurumsal Logo (Sol Sütun BVU & Cochrane Ortaklık)
 // --------------------------------------------------------------------------
 function getDesign3(iconType = 'square') {
   const iconSet = iconType === 'circle' ? data.iconsCircle : data.iconsSquare;
-  return `<!-- DESIGN 3: ÇİFT DAİRESEL İKİZ ARMA (BVU & COCHRANE) -->
-<table cellpadding="0" cellspacing="0" border="0" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 12.5px; line-height: 1.4; color: #2d3748; border-collapse: separate; border-spacing: 0; background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 12px 16px; max-width: 440px; width: 100%; box-shadow: 0 1px 4px rgba(0,0,0,0.05); mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
-  <tr>
-    <!-- Sol Çift Dairesel İkiz Arma -->
-    <td style="vertical-align: middle; padding-right: 14px; text-align: center; width: 104px;">
-      <table cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; margin: 0 auto;">
-        <tr>
-          <!-- BVU Dairesel Logo -->
-          <td style="vertical-align: middle; padding-right: 6px;">
-            <a href="${USER.web}" target="_blank" style="text-decoration: none; display: block;">
-              <img src="${data.logos.bvuYuvarlak}" alt="Bezmialem Vakıf Üniversitesi" width="48" height="48" style="display: block; width: 48px; height: 48px; border-radius: 50%; border: 0;" />
-            </a>
-          </td>
-          <!-- Cochrane Dairesel Arma -->
-          <td style="vertical-align: middle;">
-            <a href="${USER.webCochrane}" target="_blank" style="text-decoration: none; display: block;">
-              <img src="${data.logos.cochraneCircle}" alt="Cochrane Türkiye" width="45" height="45" style="display: block; width: 45px; height: 45px; border-radius: 50%; border: 0;" />
-            </a>
-          </td>
-        </tr>
-      </table>
-      <div style="font-size: 9px; font-weight: 700; color: #990033; letter-spacing: 0.5px; text-align: center; padding-top: 6px; text-transform: uppercase;">
-        BVU • COCHRANE
-      </div>
-    </td>
-
-    <!-- Dikey Bordo Ayraç Çizgisi -->
-    <td style="border-left: 2px solid #990033; padding-left: 14px; vertical-align: middle;">
-      <table cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;">
-        <tr>
-          <td style="padding-bottom: 2px;">
-            <a href="${USER.webAvesis}" target="_blank" style="font-size: 15px; font-weight: 700; color: #002b49; letter-spacing: -0.2px; text-decoration: none; display: inline-block; white-space: nowrap;">${USER.name}</a>
-          </td>
-        </tr>
-        <tr>
-          <td style="padding-bottom: 2px;">
-            <a href="${USER.webShmyo}" target="_blank" style="font-size: 12px; font-weight: 600; color: #990033; text-decoration: none; display: inline-block; white-space: nowrap;">${USER.faculty}</a>
-          </td>
-        </tr>
-        <tr>
-          <td style="padding-bottom: 7px;">
-            <a href="${USER.webProgram}" target="_blank" style="font-size: 11.5px; color: #4a5568; font-weight: 500; text-decoration: none; display: inline-block; white-space: nowrap;">${USER.program}</a>
-          </td>
-        </tr>
-
-        <!-- İletişim Bilgileri (GSM Mailin Altında) -->
-        <tr>
-          <td style="padding-bottom: 8px;">
-            <table cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;">
-              <tr>
-                <td style="padding-bottom: 3px;">
-                  <table cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;">
-                    <tr>
-                      <td style="vertical-align: middle; padding-right: 6px;">
-                        <img src="${contactBadges.mail}" alt="E-posta" width="15" height="15" style="display: block; width: 15px; height: 15px; border: 0; border-radius: 3px;" />
-                      </td>
-                      <td style="vertical-align: middle; font-size: 11.5px;">
-                        <a href="mailto:${USER.emailEdu}" style="color: #002b49; text-decoration: none; font-weight: 600; white-space: nowrap;">${USER.emailEdu}</a>
-                      </td>
-                    </tr>
-                  </table>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <table cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;">
-                    <tr>
-                      <td style="vertical-align: middle; padding-right: 6px;">
-                        <img src="${contactBadges.phone}" alt="Telefon" width="15" height="15" style="display: block; width: 15px; height: 15px; border: 0; border-radius: 3px;" />
-                      </td>
-                      <td style="vertical-align: middle; font-size: 11.5px;">
-                        <a href="tel:${USER.phoneRaw}" style="color: #4a5568; text-decoration: none; font-weight: 500; white-space: nowrap;">${USER.phone}</a>
-                      </td>
-                    </tr>
-                  </table>
-                </td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-
-        <!-- Akademik Rozetler -->
-        <tr>
-          <td>
-            <table cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;">
-              <tr>
-                ${renderIconRow(iconSet, 18, 5)}
-              </tr>
-            </table>
-          </td>
-        </tr>
-      </table>
-    </td>
-  </tr>
-</table>`;
-}
-
-// --------------------------------------------------------------------------
-// DESIGN 4: Dikey Çift Kurumsal Logo (Sol Sütun BVU & Cochrane Ortaklık)
-// --------------------------------------------------------------------------
-function getDesign4(iconType = 'square') {
-  const iconSet = iconType === 'circle' ? data.iconsCircle : data.iconsSquare;
-  return `<!-- DESIGN 4: DİKEY ÇİFT KURUMSAL LOGO (BVU & COCHRANE) -->
+  return `<!-- DESIGN 3: DİKEY ÇİFT KURUMSAL LOGO (BVU & COCHRANE) -->
 <table cellpadding="0" cellspacing="0" border="0" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 12.5px; line-height: 1.4; color: #2d3748; border-collapse: separate; border-spacing: 0; background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 12px 16px; max-width: 440px; width: 100%; box-shadow: 0 1px 4px rgba(0,0,0,0.05); mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
   <tr>
     <!-- Sol Sütunda İki Kurumsal Logo Üst Üste -->
@@ -472,113 +370,10 @@ function getDesign4(iconType = 'square') {
 </table>`;
 }
 
-// --------------------------------------------------------------------------
-// DESIGN 5: Kurumsal BVU & Rozet Entegre Cochrane (Modern Akademik Ortaklık)
-// --------------------------------------------------------------------------
-function getDesign5(iconType = 'square') {
-  const iconSet = iconType === 'circle' ? data.iconsCircle : data.iconsSquare;
-  return `<!-- DESIGN 5: KURUMSAL BVU & ROZET ENTEGRE COCHRANE -->
-<table cellpadding="0" cellspacing="0" border="0" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 12.5px; line-height: 1.4; color: #2d3748; border-collapse: separate; border-spacing: 0; background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 12px 16px; max-width: 440px; width: 100%; box-shadow: 0 1px 4px rgba(0,0,0,0.05); mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
-  <tr>
-    <!-- Sol BVU Yatay Logo -->
-    <td style="vertical-align: middle; padding-right: 14px; text-align: center; width: 110px;">
-      <div style="background-color: #ffffff; border-radius: 6px; padding: 2px 4px; display: inline-block;">
-        <a href="${USER.web}" target="_blank" style="text-decoration: none; display: block;">
-          <img src="${data.logos.bvuYatay}" alt="Bezmialem Vakıf Üniversitesi" width="108" style="display: block; width: 108px; height: auto; border: 0; outline: none;" />
-        </a>
-      </div>
-    </td>
-
-    <!-- Dikey Bordo Ayraç Çizgisi -->
-    <td style="border-left: 2px solid #990033; padding-left: 14px; vertical-align: middle;">
-      <table cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; width: 100%;">
-        <tr>
-          <td style="padding-bottom: 2px;">
-            <a href="${USER.webAvesis}" target="_blank" style="font-size: 15px; font-weight: 700; color: #002b49; letter-spacing: -0.2px; text-decoration: none; display: inline-block; white-space: nowrap;">${USER.name}</a>
-          </td>
-        </tr>
-        <tr>
-          <td style="padding-bottom: 2px;">
-            <a href="${USER.webShmyo}" target="_blank" style="font-size: 12px; font-weight: 600; color: #990033; text-decoration: none; display: inline-block; white-space: nowrap;">${USER.faculty}</a>
-          </td>
-        </tr>
-        <tr>
-          <td style="padding-bottom: 6px;">
-            <span style="font-size: 11px; color: #4a5568; font-weight: 500; white-space: nowrap;">
-              <a href="${USER.webProgram}" target="_blank" style="color: #4a5568; text-decoration: none;">${USER.program}</a> • <a href="${USER.webCochrane}" target="_blank" style="color: #990033; font-weight: 700; text-decoration: none;">Cochrane Türkiye</a>
-            </span>
-          </td>
-        </tr>
-
-        <!-- İletişim Bilgileri (GSM Mailin Altında) -->
-        <tr>
-          <td style="padding-bottom: 7px;">
-            <table cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;">
-              <tr>
-                <td style="padding-bottom: 3px;">
-                  <table cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;">
-                    <tr>
-                      <td style="vertical-align: middle; padding-right: 6px;">
-                        <img src="${contactBadges.mail}" alt="E-posta" width="15" height="15" style="display: block; width: 15px; height: 15px; border: 0; border-radius: 3px;" />
-                      </td>
-                      <td style="vertical-align: middle; font-size: 11.5px;">
-                        <a href="mailto:${USER.emailEdu}" style="color: #002b49; text-decoration: none; font-weight: 600; white-space: nowrap;">${USER.emailEdu}</a>
-                      </td>
-                    </tr>
-                  </table>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <table cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;">
-                    <tr>
-                      <td style="vertical-align: middle; padding-right: 6px;">
-                        <img src="${contactBadges.phone}" alt="Telefon" width="15" height="15" style="display: block; width: 15px; height: 15px; border: 0; border-radius: 3px;" />
-                      </td>
-                      <td style="vertical-align: middle; font-size: 11.5px;">
-                        <a href="tel:${USER.phoneRaw}" style="color: #4a5568; text-decoration: none; font-weight: 500; white-space: nowrap;">${USER.phone}</a>
-                      </td>
-                    </tr>
-                  </table>
-                </td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-
-        <!-- Alt Satır: Akademik Rozetler + Sağda Cochrane Türkiye Yatay Logo -->
-        <tr>
-          <td>
-            <table cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;">
-              <tr>
-                <td style="vertical-align: middle; padding-right: 12px;">
-                  <table cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;">
-                    <tr>
-                      ${renderIconRow(iconSet, 16, 4)}
-                    </tr>
-                  </table>
-                </td>
-                <td style="border-left: 1px solid #cbd5e1; padding-left: 10px; vertical-align: middle;">
-                  <a href="${USER.webCochrane}" target="_blank" style="text-decoration: none; display: block;">
-                    <img src="${data.logos.cochraneYatay}" alt="Cochrane Türkiye" width="76" style="display: block; width: 76px; height: auto; border: 0;" />
-                  </a>
-                </td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-      </table>
-    </td>
-  </tr>
-</table>`;
-}
-
-// Write individual HTML files (Tasarım 1, 2, 3, 4, 5)
+// Write individual HTML files (Tasarım 1, 2, 3)
 fs.writeFileSync('imza-1-prestij-dikey.html', getDesign1('square'));
 fs.writeFileSync('imza-2-kurumsal-yatay-prestij.html', getDesign2('square'));
-fs.writeFileSync('imza-3-cift-arma-prestij.html', getDesign3('square'));
-fs.writeFileSync('imza-4-cift-kurumsal-logo.html', getDesign4('square'));
-fs.writeFileSync('imza-5-rozet-entegre-cochrane.html', getDesign5('square'));
+fs.writeFileSync('imza-3-cift-kurumsal-logo.html', getDesign3('square'));
 
 console.log('Individual signature HTML files updated successfully!');
 
@@ -1066,10 +861,10 @@ const showcaseHtml = `<!DOCTYPE html>
     <div class="signature-card">
       <div class="card-top">
         <div class="card-title-wrap">
-          <span class="card-tag tag-gold">Tasarım 3</span>
+          <span class="card-tag tag-cyan">Tasarım 3</span>
           <div>
-            <div class="card-title">Çift Dairesel Prestij (BVU &amp; Cochrane İkiz Arma)</div>
-            <div class="card-desc">Sol tarafta yan yana iki prestijli dairesel arma (BVU &amp; Cochrane), dikey bordo çizgi ve iletişim bilgileri.</div>
+            <div class="card-title">Dikey Çift Kurumsal Logo (BVU &amp; Cochrane Ortaklık)</div>
+            <div class="card-desc">Sol sütunda üst üste konumlandırılmış iki resmi kurumsal logo, dikey bordo çizgi ve tam akademik künye.</div>
           </div>
         </div>
       </div>
@@ -1081,52 +876,6 @@ const showcaseHtml = `<!DOCTYPE html>
         <div style="display: flex; gap: 10px;">
           <button class="btn btn-secondary" onclick="copyRawHtml('preview-3')">📋 HTML Kopyala</button>
           <button class="btn btn-primary" onclick="copyRichSignature('preview-3')">✨ İmzayı Kopyala (Gmail &amp; Outlook)</button>
-        </div>
-      </div>
-    </div>
-
-    <!-- SIGNATURE 4 -->
-    <div class="signature-card">
-      <div class="card-top">
-        <div class="card-title-wrap">
-          <span class="card-tag tag-cyan">Tasarım 4</span>
-          <div>
-            <div class="card-title">Dikey Çift Kurumsal Logo (BVU &amp; Cochrane Ortaklık)</div>
-            <div class="card-desc">Sol sütunda üst üste konumlandırılmış iki resmi kurumsal logo, dikey bordo çizgi ve tam akademik künye.</div>
-          </div>
-        </div>
-      </div>
-      <div class="preview-canvas" id="preview-4">
-        ${getDesign4('square')}
-      </div>
-      <div class="card-bottom">
-        <span style="font-size: 12.5px; color: #64748b;">📱 Mobil uyumlu • 🌙 Dark mode korumalı • 🌐 Outlook &amp; Gmail tam uyumlu</span>
-        <div style="display: flex; gap: 10px;">
-          <button class="btn btn-secondary" onclick="copyRawHtml('preview-4')">📋 HTML Kopyala</button>
-          <button class="btn btn-primary" onclick="copyRichSignature('preview-4')">✨ İmzayı Kopyala (Gmail &amp; Outlook)</button>
-        </div>
-      </div>
-    </div>
-
-    <!-- SIGNATURE 5 -->
-    <div class="signature-card">
-      <div class="card-top">
-        <div class="card-title-wrap">
-          <span class="card-tag tag-emerald">Tasarım 5</span>
-          <div>
-            <div class="card-title">Kurumsal BVU &amp; Rozet Entegre Cochrane Logosu</div>
-            <div class="card-desc">Sol kurumsal yatay logo, unvan altında Cochrane vurgusu ve akademik rozetlerin yanında yer alan Cochrane logosu.</div>
-          </div>
-        </div>
-      </div>
-      <div class="preview-canvas" id="preview-5">
-        ${getDesign5('square')}
-      </div>
-      <div class="card-bottom">
-        <span style="font-size: 12.5px; color: #64748b;">📱 Mobil uyumlu • 🌙 Dark mode korumalı • 🌐 Outlook &amp; Gmail tam uyumlu</span>
-        <div style="display: flex; gap: 10px;">
-          <button class="btn btn-secondary" onclick="copyRawHtml('preview-5')">📋 HTML Kopyala</button>
-          <button class="btn btn-primary" onclick="copyRichSignature('preview-5')">✨ İmzayı Kopyala (Gmail &amp; Outlook)</button>
         </div>
       </div>
     </div>
