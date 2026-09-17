@@ -9,8 +9,6 @@ function getAssetSet(base = ASSET_BASE) {
       bvuYuvarlak: `${base}/bvu-yuvarlak-opt.png`,
       bvuYatay: `${base}/bvu-yatay-opt.png`,
       cochraneYatay: `${base}/cochrane-yatay-opt.png`,
-      cochraneStacked: `${base}/cochrane-stacked-opt.png`,
-      cochraneCircle: `${base}/cochrane-circle-opt.png`,
     },
     iconsSquare: {
       scholar: `${base}/icons/scholar.png`,
@@ -455,11 +453,8 @@ function getDesign3(iconType = 'square', lang = 'tr', assetBase = ASSET_BASE) {
 
 // Write individual HTML files
 // Turkish versions
-fs.writeFileSync('imza-1-prestij-dikey.html', getDesign1('square', 'tr'));
 fs.writeFileSync('imza-1-tr.html', getDesign1('square', 'tr'));
-fs.writeFileSync('imza-2-kurumsal-yatay-prestij.html', getDesign2('square', 'tr'));
 fs.writeFileSync('imza-2-tr.html', getDesign2('square', 'tr'));
-fs.writeFileSync('imza-3-cift-kurumsal-logo.html', getDesign3('square', 'tr'));
 fs.writeFileSync('imza-3-tr.html', getDesign3('square', 'tr'));
 
 // English versions
