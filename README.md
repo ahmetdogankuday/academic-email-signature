@@ -3,6 +3,8 @@
 **Öğr. Gör. Ahmet Doğan KUDAY**  
 *Sağlık Hizmetleri Meslek Yüksekokulu • İlk ve Acil Yardım Programı*
 
+🌐 **Canlı İmza Galerisi & Kopyalama Portalı:** [https://ahmetdogankuday.github.io/academic-email-signature/](https://ahmetdogankuday.github.io/academic-email-signature/)
+
 ---
 
 ## 📁 Hazırlanan Güncel Dosyalar
