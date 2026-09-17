@@ -8,11 +8,10 @@
 ## 📁 Hazırlanan Güncel Dosyalar
 
 1. **`index.html`** &rarr; **İmza Galerisi ve Tek Tıkla Kopyalama Portalı (Önerilen)**  
-   Tarayıcınızda açıp tüm 4 tasarımı canlı görebilir, tek tıkla kopyalayabilirsiniz.
+   Tarayıcınızda açıp tüm 3 tasarımı canlı görebilir, Dark Mode test edebilir ve tek tıkla kopyalayabilirsiniz.
 2. **`imza-1-prestij-dikey.html`** &rarr; Tasarım 1: Modern Akademik Prestij (Sol Dairesel BVU Arması + GSM Mailin Altında + 6 Akademik Rozet)
-3. **`imza-2-kurumsal-yatay.html`** &rarr; Tasarım 2: Kurumsal Yatay Logo (Sol Sütun Ortalanmış + Sadece Kurumsal Mail ve GSM)
-4. **`imza-3-kurumsal-yatay-prestij.html`** &rarr; Tasarım 3: Kurumsal Yatay Prestij (Tasarım 1 Düzeninin Birebir Aynısı + Yatay Logo)
-5. **`imza-4-cochrane-turkiye.html`** &rarr; Tasarım 4: Cochrane Türkiye Özel Tasarım (Cochrane Türkiye Kurumsal Kimliği ve Rozetler)
+3. **`imza-3-kurumsal-yatay-prestij.html`** &rarr; Tasarım 3: Kurumsal Yatay Prestij (Sol Yatay BVU Logosu + GSM Mailin Altında + 6 Akademik Rozet)
+4. **`imza-4-cochrane-turkiye.html`** &rarr; Tasarım 4: Cochrane Türkiye Özel Tasarım (Cochrane Türkiye Kurumsal Kimliği ve Rozetler)
 
 ---
 
