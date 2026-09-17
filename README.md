@@ -10,9 +10,12 @@
 ## 📁 Hazırlanan Güncel Dosyalar
 
 1. **`index.html`** &rarr; **İmza Galerisi ve Tek Tıkla Kopyalama Portalı (Önerilen)**  
-   Tarayıcınızda açıp her 2 tasarımı canlı görebilir, Dark Mode test edebilir ve tek tıkla kopyalayabilirsiniz.
-2. **`imza-1-prestij-dikey.html`** &rarr; Tasarım 1: Modern Akademik Prestij (Sol Dairesel BVU Arması + GSM Mailin Altında + 6 Akademik Rozet)
-3. **`imza-2-kurumsal-yatay-prestij.html`** &rarr; Tasarım 2: Kurumsal Yatay Prestij (Sol Yatay BVU Logosu + GSM Mailin Altında + 6 Akademik Rozet)
+   Tarayıcınızda açıp tüm 5 tasarımı canlı görebilir, Dark Mode test edebilir ve tek tıkla kopyalayabilirsiniz.
+2. **`imza-1-prestij-dikey.html`** &rarr; **Tasarım 1:** Modern Akademik Prestij (Sol Dairesel BVU Arması + GSM Mailin Altında + 6 Akademik Rozet)
+3. **`imza-2-kurumsal-yatay-prestij.html`** &rarr; **Tasarım 2:** Kurumsal Yatay Prestij (Sol Yatay BVU Logosu + GSM Mailin Altında + 6 Akademik Rozet)
+4. **`imza-3-cift-arma-prestij.html`** &rarr; **Tasarım 3 (Çift Logo):** Çift Dairesel Prestij (Sol BVU Dairesel & Cochrane Dairesel İkiz Arma)
+5. **`imza-4-cift-kurumsal-logo.html`** &rarr; **Tasarım 4 (Çift Logo):** Dikey Çift Kurumsal Logo (Sol Sütun BVU Yatay & Cochrane Yatay Ortaklık)
+6. **`imza-5-rozet-entegre-cochrane.html`** &rarr; **Tasarım 5 (Çift Logo):** Kurumsal BVU Yatay Logo & Akademik Rozetlerle Bütünleşik Cochrane Logosu
 
 ---
 
