@@ -16,15 +16,22 @@
 
 ---
 
-## 🚀 Gmail'e Nasıl Eklenir? (3 Adımda)
+## 🚀 Nasıl Eklenir? (Gmail & Outlook / Bezmialem Webmail)
 
-1. **`index.html`** dosyasını tarayıcınızda açın (veya doğrudan Finder'dan çift tıklayın).
-2. Beğendiğiniz tasarımın altındaki mavi **"✨ İmzayı Kopyala (Gmail İçin)"** butonuna basın.
+### 🔴 Gmail İçin:
+1. **`index.html`** dosyasını tarayıcınızda açın.
+2. Beğendiğiniz tasarımın altındaki **"✨ İmzayı Kopyala (Gmail & Outlook)"** butonuna basın.
 3. [Gmail İmza Ayarlarına](https://mail.google.com/mail/u/0/#settings/general) gidin:
-   - **Genel** sekmesinde **İmza** alanına gelin.
-   - **Yeni Oluştur** deyip bir ad verin (örn: *Akademik İmza*).
+   - **Yeni Oluştur** deyip imzanıza bir ad verin.
    - Metin kutusuna `Cmd + V` (veya sağ tık &rarr; Yapıştır) yapın.
    - Sayfanın en altındaki **Değişiklikleri Kaydet** butonuna basın.
+
+### 🔵 Outlook / Bezmialem Webmail (OWA) İçin:
+1. **`index.html`** sayfasından **"✨ İmzayı Kopyala (Gmail & Outlook)"** butonuna basın.
+2. [Bezmialem Webmail (OWA)](https://mail.bezmialem.edu.tr/owa/) sayfasını açın.
+3. Sağ üstteki **Ayarlar (Çark ⚙️)** simgesine tıklayın &rarr; **Seçenekler** &rarr; **Posta** &rarr; **Düzen** &rarr; **E-posta İmzası** sekmesine gelin.
+4. İmza kutusunun içine `Cmd + V` ile yapıştırın ve üstteki **Kaydet** butonuna basın.
+*(Görseller GitHub CDN üzerinden güvenli HTTPS ile çekildiği için Outlook ve OWA güvenlik filtrelerine takılmaz, anında ve net olarak yüklenir).*
 
 ---
 
