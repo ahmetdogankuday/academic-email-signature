@@ -45,9 +45,9 @@
 ## 🔗 Dahil Edilen Kurumsal ve Akademik Bağlantılar
 
 - **Akademik Profil (AVESİS):** [https://avesis.bezmialem.edu.tr/ahmet.kuday](https://avesis.bezmialem.edu.tr/ahmet.kuday) *(İsminize tıklandığında açılır)*
-- **SHMYO Web Sitesi:** [https://bezmialem.edu.tr/shmyo](https://bezmialem.edu.tr/shmyo) *(Sağlık Hizmetleri Meslek Yüksekokulu metnine tıklandığında açılır)*
+- **SHMYO Web Sitesi:** [https://bezmialem.edu.tr/shmyo/tr/Sayfalar/anasayfa.aspx](https://bezmialem.edu.tr/shmyo/tr/Sayfalar/anasayfa.aspx) *(Sağlık Hizmetleri Meslek Yüksekokulu metnine tıklandığında açılır)*
 - **İlk ve Acil Yardım Program Tanıtımı:** [https://bezmialem.edu.tr/shmyo/tr/Sayfalar/ilk-ve-acil-yardim/program-tanitimi.aspx](https://bezmialem.edu.tr/shmyo/tr/Sayfalar/ilk-ve-acil-yardim/program-tanitimi.aspx) *(Program metnine tıklandığında açılır)*
-- **Üniversite Web Sitesi:** [https://bezmialem.edu.tr](https://bezmialem.edu.tr) *(Logolara tıklandığında açılır)*
+- **Üniversite Web Sitesi:** [https://bezmialem.edu.tr/tr/Sayfalar/anasayfa.aspx](https://bezmialem.edu.tr/tr/Sayfalar/anasayfa.aspx) *(Logolara tıklandığında açılır)*
 - **Cochrane Türkiye:** [https://turkiye.cochrane.org](https://turkiye.cochrane.org) *(Cochrane logosuna ve başlığına tıklandığında açılır)*
 
 ### Akademik Rozetler:

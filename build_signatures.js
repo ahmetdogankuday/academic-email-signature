@@ -47,9 +47,9 @@ const USER_TR = {
   emailEdu: "ahmet.kuday@bezmialem.edu.tr",
   phone: "+90 530 114 01 12",
   phoneRaw: "+905301140112",
-  web: "https://bezmialem.edu.tr",
+  web: "https://bezmialem.edu.tr/tr/Sayfalar/anasayfa.aspx",
   webCochrane: "https://turkiye.cochrane.org",
-  webShmyo: "https://bezmialem.edu.tr/shmyo",
+  webShmyo: "https://bezmialem.edu.tr/shmyo/tr/Sayfalar/anasayfa.aspx",
   webProgram: "https://bezmialem.edu.tr/shmyo/tr/Sayfalar/ilk-ve-acil-yardim/program-tanitimi.aspx",
   webAvesis: "https://avesis.bezmialem.edu.tr/ahmet.kuday",
   links: {
@@ -71,9 +71,9 @@ const USER_EN = {
   emailEdu: "ahmet.kuday@bezmialem.edu.tr",
   phone: "+90 530 114 01 12",
   phoneRaw: "+905301140112",
-  web: "https://bezmialem.edu.tr",
+  web: "https://bezmialem.edu.tr/tr/Sayfalar/anasayfa.aspx",
   webCochrane: "https://turkiye.cochrane.org",
-  webShmyo: "https://bezmialem.edu.tr/shmyo",
+  webShmyo: "https://bezmialem.edu.tr/shmyo/tr/Sayfalar/anasayfa.aspx",
   webProgram: "https://bezmialem.edu.tr/shmyo/tr/Sayfalar/ilk-ve-acil-yardim/program-tanitimi.aspx",
   webAvesis: "https://avesis.bezmialem.edu.tr/ahmet.kuday",
   links: USER_TR.links
