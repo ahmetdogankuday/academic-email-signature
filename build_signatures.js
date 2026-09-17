@@ -252,10 +252,10 @@ function getDesign2(iconType = 'square', lang = 'tr', assetBase = ASSET_BASE) {
 <table cellpadding="0" cellspacing="0" border="0" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 12.5px; line-height: 1.4; color: #2d3748; border-collapse: separate; border-spacing: 0; background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 12px 16px; max-width: 460px; width: 100%; box-shadow: 0 1px 4px rgba(0,0,0,0.05); mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
   <tr>
     <!-- Sol Yatay Logo -->
-    <td style="vertical-align: middle; padding-right: 14px; text-align: center; width: 118px;">
+    <td style="vertical-align: middle; padding-right: 14px; text-align: center; width: 128px;">
       <div style="background-color: #ffffff; border-radius: 6px; padding: 3px 5px; display: inline-block;">
         <a href="${u.web}" target="_blank" style="text-decoration: none; display: block;">
-          <img src="${assets.logos.bvuYatay}" alt="Bezmialem Vakıf Üniversitesi" width="110" style="display: block; width: 110px; height: auto; border: 0; outline: none;" />
+          <img src="${assets.logos.bvuYatay}" alt="Bezmialem Vakıf Üniversitesi" width="120" style="display: block; width: 120px; height: auto; border: 0; outline: none;" />
         </a>
       </div>
     </td>
@@ -364,24 +364,24 @@ function getDesign3(iconType = 'square', lang = 'tr', assetBase = ASSET_BASE) {
 <table cellpadding="0" cellspacing="0" border="0" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 12.5px; line-height: 1.4; color: #2d3748; border-collapse: separate; border-spacing: 0; background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 12px 16px; max-width: 460px; width: 100%; box-shadow: 0 1px 4px rgba(0,0,0,0.05); mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
   <tr>
     <!-- Sol Sütunda İki Kurumsal Logo Üst Üste -->
-    <td style="vertical-align: middle; padding-right: 14px; text-align: center; width: 108px;">
+    <td style="vertical-align: middle; padding-right: 14px; text-align: center; width: 128px;">
       <table cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; margin: 0 auto; width: 100%;">
         <tr>
-          <td align="center" style="padding-bottom: 7px;">
+          <td align="center" style="padding-bottom: 8px;">
             <a href="${u.web}" target="_blank" style="text-decoration: none; display: block;">
-              <img src="${assets.logos.bvuYatay}" alt="Bezmialem Vakıf Üniversitesi" width="102" style="display: block; width: 102px; height: auto; border: 0; margin: 0 auto;" />
+              <img src="${assets.logos.bvuYatay}" alt="Bezmialem Vakıf Üniversitesi" width="120" style="display: block; width: 120px; height: auto; border: 0; margin: 0 auto;" />
             </a>
           </td>
         </tr>
         <tr>
-          <td align="center" style="padding-bottom: 7px;">
-            <div style="height: 1px; background-color: #edf2f7; width: 80px; margin: 0 auto;"></div>
+          <td align="center" style="padding-bottom: 8px;">
+            <div style="height: 1px; background-color: #edf2f7; width: 95px; margin: 0 auto;"></div>
           </td>
         </tr>
         <tr>
           <td align="center">
             <a href="${u.webCochrane}" target="_blank" style="text-decoration: none; display: block;">
-              <img src="${assets.logos.cochraneYatay}" alt="Cochrane Türkiye" width="98" style="display: block; width: 98px; height: auto; border: 0; margin: 0 auto;" />
+              <img src="${assets.logos.cochraneYatay}" alt="Cochrane Türkiye" width="118" style="display: block; width: 118px; height: auto; border: 0; margin: 0 auto;" />
             </a>
           </td>
         </tr>
