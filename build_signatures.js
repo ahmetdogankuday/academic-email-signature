@@ -3,35 +3,40 @@ const fs = require('fs');
 // Hosted HTTPS Assets on GitHub (Guarantees 100% compatibility with Outlook, OWA, Gmail, Apple Mail)
 const ASSET_BASE = "https://raw.githubusercontent.com/ahmetdogankuday/academic-email-signature/main/assets";
 
-const data = {
-  logos: {
-    bvuYuvarlak: `${ASSET_BASE}/bvu-yuvarlak-opt.png`,
-    bvuYatay: `${ASSET_BASE}/bvu-yatay-opt.png`,
-    cochraneYatay: `${ASSET_BASE}/cochrane-yatay-opt.png`,
-    cochraneStacked: `${ASSET_BASE}/cochrane-stacked-opt.png`,
-    cochraneCircle: `${ASSET_BASE}/cochrane-circle-opt.png`,
-  },
-  iconsSquare: {
-    scholar: `${ASSET_BASE}/icons/scholar.png`,
-    scopus: `${ASSET_BASE}/icons/scopus.png`,
-    orcid: `${ASSET_BASE}/icons/orcid.png`,
-    publons: `${ASSET_BASE}/icons/publons.png`,
-    researchgate: `${ASSET_BASE}/icons/researchgate.png`,
-    linkedin: `${ASSET_BASE}/icons/linkedin.png`,
-  },
-  iconsCircle: {
-    scholar: `${ASSET_BASE}/icons_circle/scholar.png`,
-    scopus: `${ASSET_BASE}/icons_circle/scopus.png`,
-    orcid: `${ASSET_BASE}/icons_circle/orcid.png`,
-    publons: `${ASSET_BASE}/icons_circle/publons.png`,
-    researchgate: `${ASSET_BASE}/icons_circle/researchgate.png`,
-    linkedin: `${ASSET_BASE}/icons_circle/linkedin.png`,
-  },
-  contactIcons: {
-    mailBadge: `${ASSET_BASE}/icons/mail_badge.png`,
-    phoneBadge: `${ASSET_BASE}/icons/phone_badge.png`,
-  }
-};
+function getAssetSet(base = ASSET_BASE) {
+  return {
+    logos: {
+      bvuYuvarlak: `${base}/bvu-yuvarlak-opt.png`,
+      bvuYatay: `${base}/bvu-yatay-opt.png`,
+      cochraneYatay: `${base}/cochrane-yatay-opt.png`,
+      cochraneStacked: `${base}/cochrane-stacked-opt.png`,
+      cochraneCircle: `${base}/cochrane-circle-opt.png`,
+    },
+    iconsSquare: {
+      scholar: `${base}/icons/scholar.png`,
+      scopus: `${base}/icons/scopus.png`,
+      orcid: `${base}/icons/orcid.png`,
+      publons: `${base}/icons/publons.png`,
+      researchgate: `${base}/icons/researchgate.png`,
+      linkedin: `${base}/icons/linkedin.png`,
+    },
+    iconsCircle: {
+      scholar: `${base}/icons_circle/scholar.png`,
+      scopus: `${base}/icons_circle/scopus.png`,
+      orcid: `${base}/icons_circle/orcid.png`,
+      publons: `${base}/icons_circle/publons.png`,
+      researchgate: `${base}/icons_circle/researchgate.png`,
+      linkedin: `${base}/icons_circle/linkedin.png`,
+    },
+    contactBadges: {
+      mail: `${base}/icons/mail_badge.png`,
+      phone: `${base}/icons/phone_badge.png`,
+    }
+  };
+}
+
+const data = getAssetSet(ASSET_BASE);
+const contactBadges = data.contactBadges;
 
 // Turkish Profile Data
 const USER_TR = {
@@ -59,7 +64,7 @@ const USER_TR = {
 
 // English Profile Data (as requested by user)
 const USER_EN = {
-  name: "Lec. Ahmet Doğan Kuday, DM, MSc, PhD",
+  name: "Lec. Ahmet Doğan Kuday, DM, MSc, PhD(c)",
   cochraneRole: "Core Member | Cochrane Türkiye",
   faculty: "Vocational School of Health Services",
   program: "Department of First Aid and Emergency",
@@ -74,11 +79,7 @@ const USER_EN = {
   links: USER_TR.links
 };
 
-// High contrast white-on-bordeaux contact badges for 100% Dark Mode & Mobile compatibility
-const contactBadges = {
-  mail: `${ASSET_BASE}/icons/mail_badge.png`,
-  phone: `${ASSET_BASE}/icons/phone_badge.png`
-};
+
 
 // Helper for icon row - Mobile optimized 18px size and 5px spacing
 function renderIconRow(iconSet, iconSize = 18, spacing = 5) {
@@ -103,8 +104,10 @@ function renderIconRow(iconSet, iconSize = 18, spacing = 5) {
 // --------------------------------------------------------------------------
 // DESIGN 1: Modern Akademik Prestij (Sol Dairesel Logo)
 // --------------------------------------------------------------------------
-function getDesign1(iconType = 'square', lang = 'tr') {
-  const iconSet = iconType === 'circle' ? data.iconsCircle : data.iconsSquare;
+function getDesign1(iconType = 'square', lang = 'tr', assetBase = ASSET_BASE) {
+  const assets = getAssetSet(assetBase);
+  const iconSet = iconType === 'circle' ? assets.iconsCircle : assets.iconsSquare;
+  const badges = assets.contactBadges;
   const isEn = lang === 'en';
   const u = isEn ? USER_EN : USER_TR;
 
@@ -142,7 +145,7 @@ function getDesign1(iconType = 'square', lang = 'tr') {
     <td style="vertical-align: middle; padding-right: 14px; text-align: center; width: 76px;">
       <div style="background-color: #ffffff; border-radius: 50%; padding: 3px; display: inline-block;">
         <a href="${u.web}" target="_blank" style="text-decoration: none; display: block;">
-          <img src="${data.logos.bvuYuvarlak}" alt="Bezmialem Vakıf Üniversitesi" width="70" height="70" style="display: block; width: 70px; height: 70px; border: 0; outline: none; border-radius: 50%;" />
+          <img src="${assets.logos.bvuYuvarlak}" alt="Bezmialem Vakıf Üniversitesi" width="70" height="70" style="display: block; width: 70px; height: 70px; border: 0; outline: none; border-radius: 50%;" />
         </a>
       </div>
     </td>
@@ -167,7 +170,7 @@ function getDesign1(iconType = 'square', lang = 'tr') {
                   <table cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;">
                     <tr>
                       <td style="vertical-align: middle; padding-right: 6px;">
-                        <img src="${contactBadges.mail}" alt="E-posta" width="15" height="15" style="display: block; width: 15px; height: 15px; border: 0; border-radius: 3px;" />
+                        <img src="${badges.mail}" alt="E-posta" width="15" height="15" style="display: block; width: 15px; height: 15px; border: 0; border-radius: 3px;" />
                       </td>
                       <td style="vertical-align: middle; font-size: 11.5px;">
                         <a href="mailto:${u.emailEdu}" style="color: #002b49; text-decoration: none; font-weight: 600; white-space: nowrap;">${u.emailEdu}</a>
@@ -181,7 +184,7 @@ function getDesign1(iconType = 'square', lang = 'tr') {
                   <table cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;">
                     <tr>
                       <td style="vertical-align: middle; padding-right: 6px;">
-                        <img src="${contactBadges.phone}" alt="Telefon" width="15" height="15" style="display: block; width: 15px; height: 15px; border: 0; border-radius: 3px;" />
+                        <img src="${badges.phone}" alt="Telefon" width="15" height="15" style="display: block; width: 15px; height: 15px; border: 0; border-radius: 3px;" />
                       </td>
                       <td style="vertical-align: middle; font-size: 11.5px;">
                         <a href="tel:${u.phoneRaw}" style="color: #4a5568; text-decoration: none; font-weight: 500; white-space: nowrap;">${u.phone}</a>
@@ -213,8 +216,10 @@ function getDesign1(iconType = 'square', lang = 'tr') {
 // --------------------------------------------------------------------------
 // DESIGN 2: Kurumsal Yatay Prestij (Sol Yatay Logo)
 // --------------------------------------------------------------------------
-function getDesign2(iconType = 'square', lang = 'tr') {
-  const iconSet = iconType === 'circle' ? data.iconsCircle : data.iconsSquare;
+function getDesign2(iconType = 'square', lang = 'tr', assetBase = ASSET_BASE) {
+  const assets = getAssetSet(assetBase);
+  const iconSet = iconType === 'circle' ? assets.iconsCircle : assets.iconsSquare;
+  const badges = assets.contactBadges;
   const isEn = lang === 'en';
   const u = isEn ? USER_EN : USER_TR;
 
@@ -252,7 +257,7 @@ function getDesign2(iconType = 'square', lang = 'tr') {
     <td style="vertical-align: middle; padding-right: 14px; text-align: center; width: 118px;">
       <div style="background-color: #ffffff; border-radius: 6px; padding: 3px 5px; display: inline-block;">
         <a href="${u.web}" target="_blank" style="text-decoration: none; display: block;">
-          <img src="${data.logos.bvuYatay}" alt="Bezmialem Vakıf Üniversitesi" width="110" style="display: block; width: 110px; height: auto; border: 0; outline: none;" />
+          <img src="${assets.logos.bvuYatay}" alt="Bezmialem Vakıf Üniversitesi" width="110" style="display: block; width: 110px; height: auto; border: 0; outline: none;" />
         </a>
       </div>
     </td>
@@ -277,7 +282,7 @@ function getDesign2(iconType = 'square', lang = 'tr') {
                   <table cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;">
                     <tr>
                       <td style="vertical-align: middle; padding-right: 6px;">
-                        <img src="${contactBadges.mail}" alt="E-posta" width="15" height="15" style="display: block; width: 15px; height: 15px; border: 0; border-radius: 3px;" />
+                        <img src="${badges.mail}" alt="E-posta" width="15" height="15" style="display: block; width: 15px; height: 15px; border: 0; border-radius: 3px;" />
                       </td>
                       <td style="vertical-align: middle; font-size: 11.5px;">
                         <a href="mailto:${u.emailEdu}" style="color: #002b49; text-decoration: none; font-weight: 600; white-space: nowrap;">${u.emailEdu}</a>
@@ -291,7 +296,7 @@ function getDesign2(iconType = 'square', lang = 'tr') {
                   <table cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;">
                     <tr>
                       <td style="vertical-align: middle; padding-right: 6px;">
-                        <img src="${contactBadges.phone}" alt="Telefon" width="15" height="15" style="display: block; width: 15px; height: 15px; border: 0; border-radius: 3px;" />
+                        <img src="${badges.phone}" alt="Telefon" width="15" height="15" style="display: block; width: 15px; height: 15px; border: 0; border-radius: 3px;" />
                       </td>
                       <td style="vertical-align: middle; font-size: 11.5px;">
                         <a href="tel:${u.phoneRaw}" style="color: #4a5568; text-decoration: none; font-weight: 500; white-space: nowrap;">${u.phone}</a>
@@ -323,8 +328,10 @@ function getDesign2(iconType = 'square', lang = 'tr') {
 // --------------------------------------------------------------------------
 // DESIGN 3: Dikey Çift Kurumsal Logo (Sol Sütun BVU & Cochrane)
 // --------------------------------------------------------------------------
-function getDesign3(iconType = 'square', lang = 'tr') {
-  const iconSet = iconType === 'circle' ? data.iconsCircle : data.iconsSquare;
+function getDesign3(iconType = 'square', lang = 'tr', assetBase = ASSET_BASE) {
+  const assets = getAssetSet(assetBase);
+  const iconSet = iconType === 'circle' ? assets.iconsCircle : assets.iconsSquare;
+  const badges = assets.contactBadges;
   const isEn = lang === 'en';
   const u = isEn ? USER_EN : USER_TR;
 
@@ -364,7 +371,7 @@ function getDesign3(iconType = 'square', lang = 'tr') {
         <tr>
           <td align="center" style="padding-bottom: 7px;">
             <a href="${u.web}" target="_blank" style="text-decoration: none; display: block;">
-              <img src="${data.logos.bvuYatay}" alt="Bezmialem Vakıf Üniversitesi" width="102" style="display: block; width: 102px; height: auto; border: 0; margin: 0 auto;" />
+              <img src="${assets.logos.bvuYatay}" alt="Bezmialem Vakıf Üniversitesi" width="102" style="display: block; width: 102px; height: auto; border: 0; margin: 0 auto;" />
             </a>
           </td>
         </tr>
@@ -376,7 +383,7 @@ function getDesign3(iconType = 'square', lang = 'tr') {
         <tr>
           <td align="center">
             <a href="${u.webCochrane}" target="_blank" style="text-decoration: none; display: block;">
-              <img src="${data.logos.cochraneYatay}" alt="Cochrane Türkiye" width="98" style="display: block; width: 98px; height: auto; border: 0; margin: 0 auto;" />
+              <img src="${assets.logos.cochraneYatay}" alt="Cochrane Türkiye" width="98" style="display: block; width: 98px; height: auto; border: 0; margin: 0 auto;" />
             </a>
           </td>
         </tr>
@@ -403,7 +410,7 @@ function getDesign3(iconType = 'square', lang = 'tr') {
                   <table cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;">
                     <tr>
                       <td style="vertical-align: middle; padding-right: 6px;">
-                        <img src="${contactBadges.mail}" alt="E-posta" width="15" height="15" style="display: block; width: 15px; height: 15px; border: 0; border-radius: 3px;" />
+                        <img src="${badges.mail}" alt="E-posta" width="15" height="15" style="display: block; width: 15px; height: 15px; border: 0; border-radius: 3px;" />
                       </td>
                       <td style="vertical-align: middle; font-size: 11.5px;">
                         <a href="mailto:${u.emailEdu}" style="color: #002b49; text-decoration: none; font-weight: 600; white-space: nowrap;">${u.emailEdu}</a>
@@ -417,7 +424,7 @@ function getDesign3(iconType = 'square', lang = 'tr') {
                   <table cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;">
                     <tr>
                       <td style="vertical-align: middle; padding-right: 6px;">
-                        <img src="${contactBadges.phone}" alt="Telefon" width="15" height="15" style="display: block; width: 15px; height: 15px; border: 0; border-radius: 3px;" />
+                        <img src="${badges.phone}" alt="Telefon" width="15" height="15" style="display: block; width: 15px; height: 15px; border: 0; border-radius: 3px;" />
                       </td>
                       <td style="vertical-align: middle; font-size: 11.5px;">
                         <a href="tel:${u.phoneRaw}" style="color: #4a5568; text-decoration: none; font-weight: 500; white-space: nowrap;">${u.phone}</a>
@@ -972,7 +979,7 @@ const showcaseHtml = `<!DOCTYPE html>
             <span class="lang-subtext">Öğr. Gör. Ahmet Doğan KUDAY</span>
           </div>
           <div class="preview-canvas" id="preview-1-tr">
-            ${getDesign1('square', 'tr')}
+            ${getDesign1('square', 'tr', './assets')}
           </div>
           <div class="col-bottom">
             <button class="btn btn-secondary" onclick="copyRawHtml('preview-1-tr')">📋 HTML</button>
@@ -983,10 +990,10 @@ const showcaseHtml = `<!DOCTYPE html>
         <div class="sub-col">
           <div class="sub-header">
             <span class="lang-badge lang-en">🇬🇧 English</span>
-            <span class="lang-subtext">Lec. Ahmet Doğan Kuday, DM, MSc, PhD</span>
+            <span class="lang-subtext">Lec. Ahmet Doğan Kuday, DM, MSc, PhD(c)</span>
           </div>
           <div class="preview-canvas" id="preview-1-en">
-            ${getDesign1('square', 'en')}
+            ${getDesign1('square', 'en', './assets')}
           </div>
           <div class="col-bottom">
             <button class="btn btn-secondary" onclick="copyRawHtml('preview-1-en')">📋 HTML</button>
@@ -1015,7 +1022,7 @@ const showcaseHtml = `<!DOCTYPE html>
             <span class="lang-subtext">Öğr. Gör. Ahmet Doğan KUDAY</span>
           </div>
           <div class="preview-canvas" id="preview-2-tr">
-            ${getDesign2('square', 'tr')}
+            ${getDesign2('square', 'tr', './assets')}
           </div>
           <div class="col-bottom">
             <button class="btn btn-secondary" onclick="copyRawHtml('preview-2-tr')">📋 HTML</button>
@@ -1026,10 +1033,10 @@ const showcaseHtml = `<!DOCTYPE html>
         <div class="sub-col">
           <div class="sub-header">
             <span class="lang-badge lang-en">🇬🇧 English</span>
-            <span class="lang-subtext">Lec. Ahmet Doğan Kuday, DM, MSc, PhD</span>
+            <span class="lang-subtext">Lec. Ahmet Doğan Kuday, DM, MSc, PhD(c)</span>
           </div>
           <div class="preview-canvas" id="preview-2-en">
-            ${getDesign2('square', 'en')}
+            ${getDesign2('square', 'en', './assets')}
           </div>
           <div class="col-bottom">
             <button class="btn btn-secondary" onclick="copyRawHtml('preview-2-en')">📋 HTML</button>
@@ -1058,7 +1065,7 @@ const showcaseHtml = `<!DOCTYPE html>
             <span class="lang-subtext">Öğr. Gör. Ahmet Doğan KUDAY</span>
           </div>
           <div class="preview-canvas" id="preview-3-tr">
-            ${getDesign3('square', 'tr')}
+            ${getDesign3('square', 'tr', './assets')}
           </div>
           <div class="col-bottom">
             <button class="btn btn-secondary" onclick="copyRawHtml('preview-3-tr')">📋 HTML</button>
@@ -1069,10 +1076,10 @@ const showcaseHtml = `<!DOCTYPE html>
         <div class="sub-col">
           <div class="sub-header">
             <span class="lang-badge lang-en">🇬🇧 English</span>
-            <span class="lang-subtext">Lec. Ahmet Doğan Kuday, DM, MSc, PhD</span>
+            <span class="lang-subtext">Lec. Ahmet Doğan Kuday, DM, MSc, PhD(c)</span>
           </div>
           <div class="preview-canvas" id="preview-3-en">
-            ${getDesign3('square', 'en')}
+            ${getDesign3('square', 'en', './assets')}
           </div>
           <div class="col-bottom">
             <button class="btn btn-secondary" onclick="copyRawHtml('preview-3-en')">📋 HTML</button>
@@ -1145,9 +1152,17 @@ const showcaseHtml = `<!DOCTYPE html>
       }, 3500);
     }
 
+    const REMOTE_ASSET_BASE = 'https://raw.githubusercontent.com/ahmetdogankuday/academic-email-signature/main/assets';
+
+    function makeAssetUrlsAbsolute(html) {
+      return html
+        .split('src="./assets/').join('src="' + REMOTE_ASSET_BASE + '/')
+        .split('src="assets/').join('src="' + REMOTE_ASSET_BASE + '/');
+    }
+
     async function copyRichSignature(elementId) {
       const container = document.getElementById(elementId);
-      const htmlContent = container.innerHTML.trim();
+      const htmlContent = makeAssetUrlsAbsolute(container.innerHTML.trim());
 
       try {
         const blobHtml = new Blob([htmlContent], { type: 'text/html' });
@@ -1159,8 +1174,13 @@ const showcaseHtml = `<!DOCTYPE html>
         await navigator.clipboard.write([item]);
         showToast('✓ İmza kopyalandı! Şimdi Gmail imza ayarlarında Cmd+V ile yapıştırabilirsiniz.');
       } catch (err) {
+        const tempDiv = document.createElement('div');
+        tempDiv.style.position = 'fixed';
+        tempDiv.style.left = '-9999px';
+        tempDiv.innerHTML = htmlContent;
+        document.body.appendChild(tempDiv);
         const range = document.createRange();
-        range.selectNode(container);
+        range.selectNode(tempDiv);
         window.getSelection().removeAllRanges();
         window.getSelection().addRange(range);
         try {
@@ -1169,13 +1189,15 @@ const showcaseHtml = `<!DOCTYPE html>
           showToast('✓ İmza kopyalandı! Şimdi Gmail imza ayarlarında Cmd+V ile yapıştırabilirsiniz.');
         } catch (fallbackErr) {
           showToast('Kopyalama başarısız oldu, lütfen fareyle seçip Cmd+C yapınız.');
+        } finally {
+          document.body.removeChild(tempDiv);
         }
       }
     }
 
     async function copyRawHtml(elementId) {
       const container = document.getElementById(elementId);
-      const htmlContent = container.innerHTML.trim();
+      const htmlContent = makeAssetUrlsAbsolute(container.innerHTML.trim());
       try {
         await navigator.clipboard.writeText(htmlContent);
         showToast('✓ HTML kaynak kodu panoya kopyalandı!');

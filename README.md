@@ -16,7 +16,7 @@
 4. **`imza-3-tr.html`** / **`imza-3-en.html`** &rarr; **Tasarım 3:** Dikey Çift Kurumsal Logo (Sol Sütun BVU Yatay & Cochrane Türkiye Yatay Logo + 6 Akademik Rozet)
 
 ### 🇬🇧 İngilizce Versiyon Künyesi:
-- **İsim:** `Lec. Ahmet Doğan Kuday, DM, MSc, PhD`
+- **İsim:** `Lec. Ahmet Doğan Kuday, DM, MSc, PhD(c)`
 - **Cochrane Unvanı:** `Core Member | Cochrane Türkiye`
 - **Yüksekokul:** `Vocational School of Health Services`
 - **Program / Bölüm:** `Department of First Aid and Emergency`
