@@ -65,7 +65,7 @@ const USER_EN = {
   name: "Lec. Ahmet Doğan Kuday, DM, MSc, PhD(c)",
   cochraneRole: "Core Member | Cochrane Türkiye",
   faculty: "Vocational School of Health Services",
-  program: "Department of First Aid and Emergency",
+  program: "First and Emergency Aid",
   emailEdu: "ahmet.kuday@bezmialem.edu.tr",
   phone: "+90 530 114 01 12",
   phoneRaw: "+905301140112",

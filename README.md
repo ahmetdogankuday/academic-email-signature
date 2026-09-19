@@ -19,7 +19,7 @@
 - **İsim:** `Lec. Ahmet Doğan Kuday, DM, MSc, PhD(c)`
 - **Cochrane Unvanı:** `Core Member | Cochrane Türkiye`
 - **Yüksekokul:** `Vocational School of Health Services`
-- **Program / Bölüm:** `Department of First Aid and Emergency`
+- **Program / Bölüm:** `First and Emergency Aid`
 
 ---
 
